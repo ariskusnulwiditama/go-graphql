@@ -1,0 +1,40 @@
+openapi: "3.0.2"
+info:
+  title: API Title
+  version: "1.0"
+servers:
+  - url: localhost:1323
+paths:
+  /graphql:
+    post:
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      levels:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id_level:
+                              type: string
+                            nama:
+                              type: string
+                      users:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            email:
+                              type: string
+                            nama:
+                              type: string
+                            no_handphone:
+                              type: string
